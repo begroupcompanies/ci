@@ -1,4 +1,4 @@
-# docker-js
+# docker-php-envoy
 ## Include
-* eslint-plugin-vue@7.20.0
-* eslint-config-airbnb-base@14.2.1
+* composer
+* laravel/envoy=~2.7

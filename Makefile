@@ -1,4 +1,4 @@
-IMAGE?=devbegroupcompanies/php:0.0.4
+IMAGE?=devbegroupcompanies/php:0.0.5
 
 build:
 	docker build -t $(IMAGE) .

@@ -1,5 +1,6 @@
 # docker-lib-php
 ## Include
+* node:14
 * composer
 * xdebug
 * laravel/envoy=~2.7

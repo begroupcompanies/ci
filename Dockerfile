@@ -1,9 +1,4 @@
-FROM node:14 AS node
 FROM php:7.4
-
-COPY --from=node /usr/local/lib/node_modules /usr/local/lib/node_modules
-COPY --from=node /usr/local/bin/node /usr/local/bin/node
-RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 
 RUN apt-get update
 RUN apt-get install -qq git curl libmcrypt-dev libjpeg-dev libpng-dev \
@@ -19,3 +14,10 @@ RUN composer global require "laravel/envoy:2.7" && \
     composer global require "nunomaduro/larastan:1.0.1" --with-dependencies && \
     ln -s $(composer -n config --global home)/vendor/bin/phpcs /usr/bin/phpcs && \
     ln -s $(composer -n config --global home)/vendor/bin/phpstan /usr/bin/phpstan
+
+
+RUN curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+RUN bash nodesource_setup.sh
+RUN apt install nodejs
+RUN npx install-peerdeps -g eslint-config-airbnb-base@14.2.1
+RUN npm install -g eslint-plugin-vue@7.20.0 eslint-formatter-gitlab

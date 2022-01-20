@@ -1,4 +1,4 @@
-# docker-lib-php
+# docker-lib-gitlab-ci
 ## Include
 * node:14
   * eslint-plugin-vue@7.20.0

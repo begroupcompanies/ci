@@ -1,11 +1,6 @@
 # docker-lib-gitlab-ci
 ## Include
 * node:14
-  * eslint-plugin-vue@7.20.0
-  * eslint-config-airbnb-base@14.2.1
 * php:7.4
   * composer
   * xdebug
-  * laravel/envoy=~2.7
-  * squizlabs/php_codesniffer=~3.6.1
-  * nunomaduro/larastan=~1.0.1

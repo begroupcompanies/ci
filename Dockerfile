@@ -2,10 +2,10 @@ FROM php:8.0
 
 RUN apt-get update
 RUN apt-get install -qq git curl libmcrypt-dev libjpeg-dev libpng-dev \
-    libfreetype6-dev libbz2-dev libzip-dev libicu-dev libxslt-dev
+    libfreetype6-dev libbz2-dev libzip-dev libicu-dev libxslt-dev librdkafka-dev
 RUN apt-get clean
 
-RUN pecl install mcrypt-1.0.4 xdebug && docker-php-ext-enable mcrypt xdebug
+RUN pecl install mcrypt-1.0.4 xdebug rdkafka && docker-php-ext-enable mcrypt xdebug rdkafka
 RUN docker-php-ext-install pdo_mysql zip gd intl xsl
 
 RUN curl --silent --show-error "https://getcomposer.org/installer" | php -- --install-dir=/usr/local/bin --filename=composer

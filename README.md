@@ -1,6 +1,6 @@
-# docker-lib-gitlab-ci
+# ci
 ## Include
-* node:14
-* php:8.0
+* node:16
+* php:8.1
   * composer
   * xdebug

@@ -1,4 +1,4 @@
-IMAGE?=devbegroupcompanies/ci:0.0.3
+IMAGE?=devbegroupcompanies/ci:0.0.4
 
 build:
 	docker build -t $(IMAGE) .
